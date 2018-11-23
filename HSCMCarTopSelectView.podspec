@@ -6,7 +6,7 @@ s.summary          = 'Swift4的自定义 HSCMCarTopSelectView'
 
 
 s.description      = <<-DESC
-Swift4 HSCMCarTopSelectView
+Swift4 HSCMCarTopSelectView,支持自定义扩展，欢迎提出建议
 DESC
 
 s.homepage         = 'https://github.com/DreamLCM/HSCMCarTopSelectView'
