@@ -15,7 +15,7 @@ s.author           = { 'LCM' => '212763791@qq.com' }
 s.source           = { :git => 'https://github.com/DreamLCM/HSCMCarTopSelectView.git', :tag => s.version.to_s }
 
 s.ios.deployment_target = '12.1'
-
+s.swift_version = '4.2'
 s.source_files = 'HSCMCarTopSelectView/HSCMCarTopSelectView/Class'
 
 end
