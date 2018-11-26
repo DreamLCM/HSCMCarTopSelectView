@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
 s.name             = 'HSCMCarTopSelectView'
-s.version          = '1.0.0'
+s.version          = '1.0.1'
 s.summary          = 'Swift4的自定义 HSCMCarTopSelectView'
 
 
