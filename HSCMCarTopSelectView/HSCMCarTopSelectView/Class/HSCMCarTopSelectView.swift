@@ -22,12 +22,21 @@ public protocol HSCMCarTopSelectViewDataSource: NSObjectProtocol {
     @objc(imageOfItemsHSCMCarTopSelectView:)
     /// 控件上按钮图标数组
     optional func imageOfItems(in pagerView: HSCMCarTopSelectView) -> [String]
+    
+}
+
+@objc
+public protocol HSCMCarTopSelectViewDelegate: NSObjectProtocol {
+    @objc(selectOfItemsHSCMCarTopSelectView::)
+    /// 控件上按钮图标数组
+    optional func selectOfItems(in pagerView: HSCMCarTopSelectView, selectTag: Int)
 }
 
 open class HSCMCarTopSelectView: UIView {
     
 
     open weak var dataSource: HSCMCarTopSelectViewDataSource?
+    open weak var delegate: HSCMCarTopSelectViewDelegate?
     /// 按钮点击闭包
     var buttonClickClosure: ((Int)->Void)?
     
@@ -60,6 +69,8 @@ open class HSCMCarTopSelectView: UIView {
     func initView(frame: CGRect,vc: UIViewController) {
         
         dataSource = vc as? HSCMCarTopSelectViewDataSource
+        delegate = vc as? HSCMCarTopSelectViewDelegate
+        
         numberItems = dataSource!.numberOfItems(in: self)
         arrayTitle = dataSource!.titleOfItems(in: self)
         arrayImage = dataSource!.imageOfItems!(in: self)
@@ -91,13 +102,12 @@ open class HSCMCarTopSelectView: UIView {
                 continue
             }
             
-            
         }
         
     }
     
     @objc func buttonAction(btn: UIButton) {
-        buttonClickClosure!(btn.tag)
+        delegate!.selectOfItems!(in: self, selectTag: btn.tag)
     }
     
 
