@@ -29,7 +29,7 @@ public protocol HSCMCarTopSelectViewDataSource: NSObjectProtocol {
 public protocol HSCMCarTopSelectViewDelegate: NSObjectProtocol {
     @objc(selectOfItemsHSCMCarTopSelectView::)
     /// 控件上按钮图标数组
-    optional func selectOfItems(in pagerView: HSCMCarTopSelectView, selectTag: Int)
+    optional func selectOfItems(in pagerView: HSCMCarTopSelectView, btn: UIButton)
 }
 
 open class HSCMCarTopSelectView: UIView {
@@ -39,8 +39,6 @@ open class HSCMCarTopSelectView: UIView {
     open weak var delegate: HSCMCarTopSelectViewDelegate?
     /// 按钮点击闭包
     var buttonClickClosure: ((Int)->Void)?
-    
-    
     /// 间距
     let paddingButton:CGFloat = 0
     /// 显示控件个数
@@ -68,6 +66,7 @@ open class HSCMCarTopSelectView: UIView {
     
     func initView(frame: CGRect,vc: UIViewController) {
         
+        backgroundColor = UIColor.green
         dataSource = vc as? HSCMCarTopSelectViewDataSource
         delegate = vc as? HSCMCarTopSelectViewDelegate
         
@@ -107,7 +106,7 @@ open class HSCMCarTopSelectView: UIView {
     }
     
     @objc func buttonAction(btn: UIButton) {
-        delegate!.selectOfItems!(in: self, selectTag: btn.tag)
+        delegate!.selectOfItems!(in: self, btn: btn)
     }
     
 

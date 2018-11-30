@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8362720021B1668700490F82 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 836271FE21B1668700490F82 /* CollectionViewCell.swift */; };
+		8362720121B1668700490F82 /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 836271FF21B1668700490F82 /* CollectionViewCell.xib */; };
+		837A9FDA21AD2C3600CB4932 /* ViewShowSelectTips.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837A9FD921AD2C3600CB4932 /* ViewShowSelectTips.swift */; };
+		837A9FDC21AD3D6000CB4932 /* UIView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 837A9FDB21AD3D6000CB4932 /* UIView+extension.swift */; };
 		839179AC21A7E2BA00D8EB8C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839179AB21A7E2BA00D8EB8C /* AppDelegate.swift */; };
 		839179AE21A7E2BA00D8EB8C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 839179AD21A7E2BA00D8EB8C /* ViewController.swift */; };
 		839179B121A7E2BA00D8EB8C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 839179AF21A7E2BA00D8EB8C /* Main.storyboard */; };
@@ -16,6 +20,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		836271FE21B1668700490F82 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		836271FF21B1668700490F82 /* CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
+		837A9FD921AD2C3600CB4932 /* ViewShowSelectTips.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewShowSelectTips.swift; sourceTree = "<group>"; };
+		837A9FDB21AD3D6000CB4932 /* UIView+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+extension.swift"; sourceTree = "<group>"; };
 		839179A821A7E2BA00D8EB8C /* HSCMCarTopSelectView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HSCMCarTopSelectView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		839179AB21A7E2BA00D8EB8C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		839179AD21A7E2BA00D8EB8C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -70,7 +78,11 @@
 		83F7921F21A8177A001E18DC /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				837A9FDB21AD3D6000CB4932 /* UIView+extension.swift */,
 				839179BD21A7E72800D8EB8C /* HSCMCarTopSelectView.swift */,
+				837A9FD921AD2C3600CB4932 /* ViewShowSelectTips.swift */,
+				836271FE21B1668700490F82 /* CollectionViewCell.swift */,
+				836271FF21B1668700490F82 /* CollectionViewCell.xib */,
 			);
 			path = Class;
 			sourceTree = "<group>";
@@ -135,6 +147,7 @@
 			files = (
 				839179B621A7E2BB00D8EB8C /* LaunchScreen.storyboard in Resources */,
 				839179B321A7E2BB00D8EB8C /* Assets.xcassets in Resources */,
+				8362720121B1668700490F82 /* CollectionViewCell.xib in Resources */,
 				839179B121A7E2BA00D8EB8C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -146,9 +159,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				837A9FDC21AD3D6000CB4932 /* UIView+extension.swift in Sources */,
 				839179AE21A7E2BA00D8EB8C /* ViewController.swift in Sources */,
+				8362720021B1668700490F82 /* CollectionViewCell.swift in Sources */,
 				839179BE21A7E72800D8EB8C /* HSCMCarTopSelectView.swift in Sources */,
 				839179AC21A7E2BA00D8EB8C /* AppDelegate.swift in Sources */,
+				837A9FDA21AD2C3600CB4932 /* ViewShowSelectTips.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
